@@ -1,11 +1,31 @@
 package com.example.warehouse.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "document_details")
 public class Detail {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "item")
+    @ManyToOne
     private Item item;
-    private int debit;
-    private int credit;
+
+    @Column(name = "document")
+    @ManyToOne
     private Document document;
+
+    @Column(name = "debit")
+    private int debit;
+
+    @Column(name = "credit")
+    private int credit;
+
+    @OneToMany(mappedBy = "detail", cascade = CascadeType.ALL)
     private Price price;
 
     public int getId() {
