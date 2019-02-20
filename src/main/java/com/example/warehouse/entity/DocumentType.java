@@ -1,5 +1,7 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -10,12 +12,14 @@ public class DocumentType {
     @Id
     @Column (name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
     @Column (name = "name")
     private String name;
 
     @OneToMany(mappedBy = "documentType")
+    @JsonIgnore
     private Set<Document> documents;
 
     public Set<Document> getDocuments() {

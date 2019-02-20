@@ -1,5 +1,7 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,13 +11,14 @@ public class Detail {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
-    @Column(name = "item")
+    @JoinColumn(name = "item")
     @ManyToOne
     private Item item;
 
-    @Column(name = "document")
+    @JoinColumn(name = "document")
     @ManyToOne
     private Document document;
 
@@ -25,7 +28,7 @@ public class Detail {
     @Column(name = "credit")
     private int credit;
 
-    @OneToMany(mappedBy = "detail", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "detail", cascade = CascadeType.ALL)
     private Price price;
 
     public int getId() {

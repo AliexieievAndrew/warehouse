@@ -16,7 +16,7 @@ public class Item {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "sub_category")
+    @JoinColumn(name = "sub_category")
     @ManyToOne
     private SubCategory subCategory;
 

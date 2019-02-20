@@ -1,17 +1,21 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
+@Entity
 @Table(name = "price")
 public class Price {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
-    @ManyToOne
-    @Column(name = "document_details")
+    @OneToOne
+    @JoinColumn(name = "document_details")
     private Detail detail;
 
     @Column(name = "price")

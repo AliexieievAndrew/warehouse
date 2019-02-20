@@ -1,5 +1,7 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.Objects;
@@ -14,15 +16,15 @@ public class Document {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "date")
+    @Column(name = "created_date")
     private OffsetDateTime date;
 
-    @Column(name = "document_type")
-
+    @JoinColumn(name = "document_type")
     @ManyToOne
     private DocumentType documentType;
 
     @OneToMany(mappedBy = "document")
+    @JsonIgnore
     private Set<Detail> details;
 
     public int getId() {

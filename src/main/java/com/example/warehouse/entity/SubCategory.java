@@ -1,5 +1,7 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
@@ -11,9 +13,10 @@ public class SubCategory {
     @Id
     @Column(name = "id")
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
-    @Column (name = "category")
+    @JoinColumn (name = "category")
     @ManyToOne
     private Category category;
 
@@ -21,6 +24,7 @@ public class SubCategory {
     private String description;
 
     @OneToMany(mappedBy = "subCategory")
+    @JsonIgnore
     private Set<Item> items;
 
     public Set<Item> getItems() {
