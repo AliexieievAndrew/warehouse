@@ -1,6 +1,6 @@
 package com.example.warehouse.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.time.OffsetDateTime;
@@ -21,10 +21,11 @@ public class Document {
 
     @JoinColumn(name = "document_type")
     @ManyToOne
+    @JsonManagedReference
     private DocumentType documentType;
 
     @OneToMany(mappedBy = "document")
-    @JsonIgnore
+    @JsonManagedReference
     private Set<Detail> details;
 
     public int getId() {

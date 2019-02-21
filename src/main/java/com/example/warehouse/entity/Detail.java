@@ -1,5 +1,6 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class Detail {
 
     @JoinColumn(name = "document")
     @ManyToOne
+    @JsonBackReference
     private Document document;
 
     @Column(name = "debit")
@@ -29,6 +31,7 @@ public class Detail {
     private int credit;
 
     @OneToOne(mappedBy = "detail", cascade = CascadeType.ALL)
+    @JsonBackReference
     private Price price;
 
     public int getId() {
@@ -77,5 +80,17 @@ public class Detail {
 
     public void setPrice(Price price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Detail{" +
+                "id=" + id +
+                ", item=" + item +
+                ", document=" + document +
+                ", debit=" + debit +
+                ", credit=" + credit +
+                ", price=" + price +
+                '}';
     }
 }

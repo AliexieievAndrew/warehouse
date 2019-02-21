@@ -1,6 +1,7 @@
 package com.example.warehouse.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
@@ -16,6 +17,7 @@ public class Price {
 
     @OneToOne
     @JoinColumn(name = "document_details")
+    @JsonManagedReference
     private Detail detail;
 
     @Column(name = "price")

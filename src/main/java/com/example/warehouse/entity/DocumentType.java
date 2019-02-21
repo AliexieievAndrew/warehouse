@@ -1,5 +1,6 @@
 package com.example.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -19,7 +20,7 @@ public class DocumentType {
     private String name;
 
     @OneToMany(mappedBy = "documentType")
-    @JsonIgnore
+    @JsonBackReference
     private Set<Document> documents;
 
     public Set<Document> getDocuments() {

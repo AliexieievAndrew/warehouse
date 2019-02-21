@@ -1,6 +1,9 @@
 package com.example.warehouse.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
@@ -11,6 +14,7 @@ public class Item {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
     @Column(name = "name")
@@ -24,6 +28,7 @@ public class Item {
     private String description;
 
     @OneToMany(mappedBy = "item")
+    @JsonIgnore
     private Set<Detail> details;
 
     public int getId() {
