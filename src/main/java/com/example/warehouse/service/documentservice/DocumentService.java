@@ -16,4 +16,38 @@ public class DocumentService implements IDocumentService {
         return documentRepository.findAll();
     }
 
+    @Override
+    public Document getById(int id) {
+        return documentRepository.findById(id);
+    }
+
+    @Override
+    public double calcDebitByDocument(Document document){
+        return document
+                .getDetails()
+                .stream()
+                .mapToInt(detail -> detail.getDebit())
+                .sum();
+    }
+
+    @Override
+    public double calcCreditByDocument(Document document){
+        return document
+                .getDetails()
+                .stream()
+                .mapToInt(detail -> detail.getCredit())
+                .sum();
+    }
+
+    @Override
+    public double calcTotalPrice(Document document) {
+        if(document.getDocumentType().equals("outcome invoice"))
+            return 0;
+
+        return document
+                .getDetails()
+                .stream()
+                .mapToDouble(detail -> detail.getPrice() * detail.getDebit())
+                .sum();
+    }
 }

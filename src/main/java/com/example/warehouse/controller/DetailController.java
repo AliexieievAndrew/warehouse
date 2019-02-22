@@ -18,5 +18,5 @@ public class DetailController {
     public Iterable<Detail> findAllDetails() {
         return detailService.findAll();
     }
-    
+
 }

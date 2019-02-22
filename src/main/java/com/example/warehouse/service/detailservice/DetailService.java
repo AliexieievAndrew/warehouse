@@ -1,6 +1,7 @@
 package com.example.warehouse.service.detailservice;
 
 import com.example.warehouse.entity.Detail;
+import com.example.warehouse.entity.Document;
 import com.example.warehouse.repository.DetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,4 +20,5 @@ public class DetailService implements IDetailService {
     public void saveAll (List<Detail> details) {
         detailRepository.saveAll(details);
     }
+
 }
