@@ -1,7 +1,7 @@
 package com.example.warehouse.service.detailservice;
 
 import com.example.warehouse.entity.Detail;
-import com.example.warehouse.entity.Document;
+import com.example.warehouse.entity.Item;
 import com.example.warehouse.repository.DetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,4 +21,40 @@ public class DetailService implements IDetailService {
         detailRepository.saveAll(details);
     }
 
+    @Override
+    public Detail findById(int id) {
+        return detailRepository.findById(id);
+    }
+
+    @Override
+    public List<Detail> findByItem(Item item) {
+        return detailRepository.findByItem(item);
+    }
+
+    @Override
+    public double averagePrice(List<Detail> details) {
+        return details
+                .stream()
+                .mapToDouble(detail -> detail.getPrice())
+                .average()
+                .getAsDouble();
+    }
+
+    @Override
+    public double minPrice(List<Detail> details) {
+        return details
+                .stream()
+                .mapToDouble(detail -> detail.getPrice())
+                .min()
+                .getAsDouble();
+    }
+
+    @Override
+    public double maxPrice(List<Detail> details) {
+        return details
+                .stream()
+                .mapToDouble(detail -> detail.getPrice())
+                .max()
+                .getAsDouble();
+    }
 }

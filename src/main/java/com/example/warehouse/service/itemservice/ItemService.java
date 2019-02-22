@@ -13,4 +13,9 @@ public class ItemService implements IItemService {
     public Iterable<Item> findAll() {
         return itemRepository.findAll();
     }
+
+    @Override
+    public Item findById(int id) {
+        return itemRepository.findById(id);
+    }
 }
