@@ -24,7 +24,7 @@ public class Document {
     @JsonManagedReference
     private DocumentType documentType;
 
-    @OneToMany(mappedBy = "document")
+    @OneToMany(mappedBy = "document", cascade = CascadeType.ALL)
     @JsonManagedReference
     private Set<Detail> details;
 

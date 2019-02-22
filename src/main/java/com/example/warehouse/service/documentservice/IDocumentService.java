@@ -1,4 +1,4 @@
-package com.example.warehouse.service;
+package com.example.warehouse.service.documentservice;
 
 import com.example.warehouse.entity.Document;
 

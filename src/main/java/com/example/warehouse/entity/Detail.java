@@ -16,11 +16,11 @@ public class Detail {
     private int id;
 
     @JoinColumn(name = "item")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Item item;
 
     @JoinColumn(name = "document")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JsonBackReference
     private Document document;
 
@@ -30,9 +30,9 @@ public class Detail {
     @Column(name = "credit")
     private int credit;
 
-    @OneToOne(mappedBy = "detail", cascade = CascadeType.ALL)
-    @JsonBackReference
-    private Price price;
+    @Column(name = "price")
+    private double price;
+
 
     public int getId() {
         return id;
@@ -74,11 +74,11 @@ public class Detail {
         this.document = document;
     }
 
-    public Price getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Price price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

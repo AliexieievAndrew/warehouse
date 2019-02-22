@@ -27,7 +27,7 @@ public class Item {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Detail> details;
 
