@@ -4,4 +4,6 @@ import com.example.warehouse.entity.DocumentType;
 
 public interface IDocumentTypeService {
     Iterable<DocumentType> findAll();
+
+    DocumentType save(DocumentType documentType);
 }

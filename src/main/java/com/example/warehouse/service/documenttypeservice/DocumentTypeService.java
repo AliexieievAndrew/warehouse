@@ -13,4 +13,9 @@ public class DocumentTypeService implements IDocumentTypeService{
     public Iterable<DocumentType> findAll() {
         return documentTypeRepository.findAll();
     }
+
+    @Override
+    public DocumentType save(DocumentType documentType){
+        return documentTypeRepository.save(documentType);
+    }
 }

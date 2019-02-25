@@ -31,7 +31,7 @@ public class Detail {
     private int credit;
 
     @Column(name = "price")
-    private double price;
+    private double price = 0;
 
 
     public int getId() {
