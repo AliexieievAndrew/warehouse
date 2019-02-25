@@ -28,11 +28,4 @@ public class DetailController {
         return detailService.findAll();
     }
 
-    @GetMapping("/test")
-    public void average() {
-        Item item = itemService.findById(1);
-
-        System.out.println(detailService.averagePrice(detailService.findByItem(item)));
-    }
-
 }
