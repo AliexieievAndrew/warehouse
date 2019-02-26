@@ -208,6 +208,7 @@ body {
     width: 60px;
     left: 0;
     top: 0px;
+    height: 100vh;
 }
 
 .sidebar-hide .sidebar.sidebar-hide-to-small, .sidebar-hide .sidebar.sidebar-hide-to-small .nano, .sidebar-hide .sidebar.sidebar-hide-to-small .nano-content {
