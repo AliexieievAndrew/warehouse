@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <#assign context = springMacroRequestContext.getContextPath()/>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Focus Admin: Admin UI</title>
+        <title>Warehouse: Admin panel</title>
+
+        <script>
+            window.contextRoot = '${context}';
+        </script>
 
         <!-- ================= Favicon ================== -->
         <!-- Standard -->
@@ -31,6 +37,16 @@
 
         <link href="assets/css/lib/helper.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
+
+
+        <!-- Styles -->
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+
+        <link href="/assets/css/lib/data-table/dataTables.bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/lib/data-table/buttons.dataTables.min.css" rel="stylesheet" />
+
     </head>
 
     <body>
@@ -43,8 +59,8 @@
                         <li class="label">Main</li>
                         <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> New Document <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="/#">Income invoice</a></li>
-                                <li><a href="/#">Outcome invoice</a></li>
+                                <li><a href="/test">Income invoice</a></li>
+                                <li><a href="/test2">Outcome invoice</a></li>
                                 <li><a href="/#">Balance</a></li>
                             </ul>
                         </li>
@@ -64,10 +80,10 @@
                         <li class="label">Extra</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Invoice <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="/#">Test</a></li>
+                                <li><a href="/incomeInvoices"> Income Invoices </a></li>
                             </ul>
                         </li>
-                        <li><a href="/#"><i class="ti-file"></i> Documentation</a></li>
+                        <li><a href="/#"><i class="ti-file"></i> Documentation </a></li>
 
 
                         <li class="label footer fixed-bottom"> 2019 Aliexieiev Andrew </a></li>
@@ -127,11 +143,10 @@
                     </div>
                     <!-- /# row -->
                     <section id="main-content">
-
-                        <#--here will be main content-->
-
-
-
+                        <#if page?has_content>
+                            <#--here will be main content-->
+                                <#include "*/views/${page}.ftl"/>
+                        </#if>
                     </section>
                 </div>
             </div>
@@ -143,71 +158,51 @@
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
         </div>
+
         <!-- jquery vendor -->
-        <script src="assets/js/lib/jquery.min.js"></script>
-        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <script src="/assets/js/lib/jquery.min.js"></script>
+        <script src="/assets/js/lib/jquery.nanoscroller.min.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
         <!-- nano scroller -->
-        <script src="assets/js/lib/menubar/sidebar.js"></script>
-        <script src="assets/js/lib/preloader/pace.min.js"></script>
+        <script src="/assets/js/lib/menubar/sidebar.js"></script>
+        <script src="/assets/js/lib/preloader/pace.min.js"></script>
         <!-- sidebar -->
-        <script src="assets/js/lib/bootstrap.min.js"></script>
+        <script src="/assets/js/lib/bootstrap.min.js"></script>
 
         <!-- bootstrap -->
 
-        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
-        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+        <script src="/assets/js/lib/circle-progress/circle-progress.min.js"></script>
+        <script src="/assets/js/lib/circle-progress/circle-progress-init.js"></script>
 
-        <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
-        <script src="assets/js/lib/morris-chart/morris.js"></script>
-        <script src="assets/js/lib/morris-chart/morris-init.js"></script>
+        <script src="/assets/js/lib/morris-chart/raphael-min.js"></script>
+        <script src="/assets/js/lib/morris-chart/morris.js"></script>
+        <script src="/assets/js/lib/morris-chart/morris-init.js"></script>
 
         <!--  flot-chart js -->
-        <script src="assets/js/lib/flot-chart/jquery.flot.js"></script>
-        <script src="assets/js/lib/flot-chart/jquery.flot.resize.js"></script>
-        <script src="assets/js/lib/flot-chart/flot-chart-init.js"></script>
+        <script src="/assets/js/lib/flot-chart/jquery.flot.js"></script>
+        <script src="/assets/js/lib/flot-chart/jquery.flot.resize.js"></script>
+        <script src="/assets/js/lib/flot-chart/flot-chart-init.js"></script>
         <!-- // flot-chart js -->
 
 
-        <script src="assets/js/lib/vector-map/jquery.vmap.js"></script>
+        <script src="/assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="/assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+        <script src="/assets/js/scripts.js"></script>
         <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/jquery.vmap.min.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.algeria.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.argentina.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.brazil.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.france.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.germany.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.greece.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.iran.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.iraq.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.russia.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.tunisia.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.europe.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/country/jquery.vmap.usa.js"></script>
-        <!-- scripit init-->
-        <script src="assets/js/lib/vector-map/vector.init.js"></script>
 
-        <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
-        <script src="assets/js/lib/weather/weather-init.js"></script>
-        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
-        <script src="assets/js/scripts.js"></script>
-        <!-- scripit init-->
+        <script src="assets/js/lib/data-table/datatables.min.js"></script>
+        <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+        <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+        <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+        <script src="assets/js/lib/data-table/jszip.min.js"></script>
+        <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
+        <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
+        <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
+        <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+        <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
+        <script src="assets/js/lib/data-table/datatables-init.js"></script>
 
     </body>
 
