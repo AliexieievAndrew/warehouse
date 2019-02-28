@@ -5,6 +5,8 @@ import com.example.warehouse.repository.DocumentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DocumentService implements IDocumentService {
 
@@ -19,6 +21,11 @@ public class DocumentService implements IDocumentService {
     @Override
     public Document getById(int id) {
         return documentRepository.findById(id);
+    }
+
+    @Override
+    public Iterable<Document> findAllByDocumentTypeId(int id){
+        return documentRepository.findAllByDocumentTypeId(id);
     }
 
     @Override

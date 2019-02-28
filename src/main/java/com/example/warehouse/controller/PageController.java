@@ -17,7 +17,15 @@ public class PageController {
 
     @GetMapping(value = "/incomeInvoices")
     public String incomeInvoices(Model model) {
-        model.addAttribute("page", "incomeInvoice");
+        model.addAttribute("page", "invoices");
+        model.addAttribute("documentType", 1);
+        return "index";
+    }
+
+    @GetMapping(value = "/outcomeInvoices")
+    public String outcomeInvoices(Model model) {
+        model.addAttribute("page", "invoices");
+        model.addAttribute("documentType", 2);
         return "index";
     }
 }

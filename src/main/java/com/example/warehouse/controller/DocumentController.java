@@ -19,4 +19,13 @@ public class DocumentController {
         return documentService.findAll();
     }
 
+    @GetMapping("/incomeInvoices")
+    public Iterable <Document> findAllIncomeInvoices() {
+        return documentService.findAllByDocumentTypeId(1);
+    }
+
+    @GetMapping("/outcomeInvoices")
+    public Iterable <Document> findAllOutcomeInvoices() {
+        return documentService.findAllByDocumentTypeId(2);
+    }
 }

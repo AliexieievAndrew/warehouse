@@ -1,3 +1,7 @@
+<script>
+    window.documentType = '${documentType}';
+</script>
+
 <div class="content-wrap">
     <div class="main">
         <div class="container-fluid">
@@ -12,7 +16,7 @@
                             </div>
                             <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive col-lg-8" >
-                                    <table id="incomeInvoicesTable" class="display table table-bordered table-hover" style="width: 100%">
+                                    <table id="invoicesTable" class="display table table-bordered table-hover" style="width: 100%">
                                         <thead>
                                         <tr>
                                             <th>id</th>

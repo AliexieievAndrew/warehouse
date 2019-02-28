@@ -1,8 +1,16 @@
 $(function () {
-    var $incomeInvoicesTable = $('#incomeInvoicesTable');
-    console.log('HELLLOOOO');
+    var $incomeInvoicesTable = $('#invoicesTable');
+
     if ($incomeInvoicesTable.length) {
-        var jsonUrl = window.contextRoot + '/documents/findAll';
+        var jsonUrl;
+
+        if (window.documentType == 1){
+            jsonUrl = window.contextRoot + '/documents/incomeInvoices';
+        }
+        if (window.documentType == 2){
+            jsonUrl = window.contextRoot + '/documents/outcomeInvoices';
+        }
+
         $incomeInvoicesTable.DataTable({
             ajax: {
                 url: jsonUrl,
