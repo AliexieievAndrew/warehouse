@@ -11,8 +11,11 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-title">
-                                <h4>All income invoices</h4>
-
+                                <#if documentType == 1>
+                                    <h4>All income invoices</h4>
+                                <#elseif documentType == 2>
+                                    <h4>All outcome invoices</h4>
+                                </#if>
                             </div>
                             <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive col-lg-8" >
