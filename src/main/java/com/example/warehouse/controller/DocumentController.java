@@ -1,11 +1,13 @@
 package com.example.warehouse.controller;
 
+import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Document;
+import com.example.warehouse.entity.Item;
 import com.example.warehouse.service.documentservice.IDocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Set;
 
 @RestController
 @RequestMapping("/documents")
@@ -27,5 +29,12 @@ public class DocumentController {
     @GetMapping("/outcomeInvoices")
     public Iterable <Document> findAllOutcomeInvoices() {
         return documentService.findAllByDocumentTypeId(2);
+    }
+
+    @GetMapping("/document/{id}")
+//    @ResponseBody
+    public Set<Detail> getById(@PathVariable ("id") int id) {
+        System.out.println("chek");
+        return  documentService.getById(id).getDetails();
     }
 }

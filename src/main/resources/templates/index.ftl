@@ -27,21 +27,21 @@
         <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
 
         <!-- Styles -->
-        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
-        <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
-        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/lib/weather-icons.css" rel="stylesheet" />
+        <link href="/assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+        <link href="/assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="/assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="/assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+        <link href="/assets/css/lib/bootstrap.min.css" rel="stylesheet">
 
-        <link href="assets/css/lib/helper.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="/assets/css/lib/helper.css" rel="stylesheet">
+        <link href="/assets/css/style.css" rel="stylesheet">
 
 
         <!-- Styles -->
-        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="/assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="/assets/css/lib/themify-icons.css" rel="stylesheet">
 
         <link href="/assets/css/lib/data-table/dataTables.bootstrap.min.css" rel="stylesheet" />
         <link href="/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
@@ -135,38 +135,26 @@
         <div class="content-wrap">
             <div class="main">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-8 p-r-0 title-margin-right">
-                            <div class="page-header">
-                                <div class="page-title">
-                                    <h1>Hello, <span>Welcome Here</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- /# row -->
                     <section id="main-content">
+
                         <#if page?has_content>
                             <#--here will be main content-->
                                 <#include "*/views/${page}.ftl"/>
                         </#if>
+
                     </section>
                 </div>
             </div>
-        </div>
-        <div id="search">
-            <button type="button" class="close">×</button>
-            <form>
-                <input type="search" value="" placeholder="type keyword(s) here" />
-                <button type="submit" class="btn btn-primary">Search</button>
-            </form>
         </div>
 
         <!-- jquery vendor -->
         <script src="/assets/js/lib/jquery.min.js"></script>
         <script src="/assets/js/lib/jquery.nanoscroller.min.js"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="/assets/js/invoices.js"></script>
+        <script src="/assets/js/invoice.js"></script>
 
 
         <!-- nano scroller -->
@@ -196,17 +184,17 @@
         <script src="/assets/js/scripts.js"></script>
         <!-- scripit init-->
 
-        <script src="assets/js/lib/data-table/datatables.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-        <script src="assets/js/lib/data-table/jszip.min.js"></script>
-        <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
-        <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
-        <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
-        <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-        <script src="assets/js/lib/data-table/datatables-init.js"></script>
+        <script src="/assets/js/lib/data-table/datatables.min.js"></script>
+        <script src="/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+        <script src="/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+        <script src="/assets/js/lib/data-table/jszip.min.js"></script>
+        <script src="/assets/js/lib/data-table/pdfmake.min.js"></script>
+        <script src="/assets/js/lib/data-table/vfs_fonts.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.html5.min.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.print.min.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+        <script src="/assets/js/lib/data-table/datatables-init.js"></script>
 
     </body>
 

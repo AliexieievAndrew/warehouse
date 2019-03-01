@@ -20,6 +20,9 @@ public class SubCategory {
     @ManyToOne
     private Category category;
 
+    @Column(name = "name")
+    private String name;
+
     @Column (name = "description")
     private String description;
 
@@ -59,6 +62,14 @@ public class SubCategory {
         this.description = description;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -77,7 +88,9 @@ public class SubCategory {
         return "SubCategory{" +
                 "id=" + id +
                 ", category=" + category +
+                ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", items=" + items +
                 '}';
     }
 }
