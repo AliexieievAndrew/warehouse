@@ -2,6 +2,10 @@ package com.example.warehouse.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 
@@ -33,9 +37,20 @@ public class Detail {
     @Column(name = "price")
     private double price = 0;
 
+    @Transient
+    @JsonSerialize
+    private double total;
 
     public int getId() {
         return id;
+    }
+
+    public double getTotal() {
+        return this.price * this.debit;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 
     public void setId(int id) {
@@ -91,6 +106,7 @@ public class Detail {
                 ", debit=" + debit +
                 ", credit=" + credit +
                 ", price=" + price +
+                ", total=" + total +
                 '}';
     }
 }

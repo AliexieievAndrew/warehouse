@@ -16,9 +16,15 @@
                             <th>price</th>
                             <th>debit</th>
                             <th>credit</th>
-                            <#--<th>total</th>-->
+                            <th>total</th>
                         </tr>
                         </thead>
+                        <tfoot>
+                        <tr>
+                            <th colspan="6" style="text-align:right">Total:</th>
+                            <th></th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
