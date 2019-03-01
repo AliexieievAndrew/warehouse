@@ -80,10 +80,10 @@
                         <li class="label">Extra</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Invoices <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="/incomeInvoices"> Income Invoices </a></li>
+                                <li><a href="/invoices/incomeInvoices"> Income Invoices </a></li>
                             </ul>
                             <ul>
-                                <li><a href="/outcomeInvoices"> Outcome Invoices </a></li>
+                                <li><a href="/invoices/outcomeInvoices"> Outcome Invoices </a></li>
                             </ul>
                         </li>
                         <li><a href="/#"><i class="ti-file"></i> Documentation </a></li>

@@ -33,7 +33,7 @@ $(function () {
                     data: 'id',
                     bSortable: false,
                     mRender: function (data,type,row) {
-                        return '<a href="/invoice/' + data + '"> details -> </a>'
+                        return '<a href="/invoices/invoice/' + data + '"> details -> </a>'
                     }
                 }
             ]

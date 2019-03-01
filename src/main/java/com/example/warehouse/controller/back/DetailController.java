@@ -1,4 +1,4 @@
-package com.example.warehouse.controller;
+package com.example.warehouse.controller.back;
 
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Item;

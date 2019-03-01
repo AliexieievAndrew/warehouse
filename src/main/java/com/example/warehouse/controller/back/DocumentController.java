@@ -1,8 +1,7 @@
-package com.example.warehouse.controller;
+package com.example.warehouse.controller.back;
 
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Document;
-import com.example.warehouse.entity.Item;
 import com.example.warehouse.service.documentservice.IDocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,9 +31,7 @@ public class DocumentController {
     }
 
     @GetMapping("/document/{id}")
-//    @ResponseBody
     public Set<Detail> getById(@PathVariable ("id") int id) {
-        System.out.println("chek");
         return  documentService.getById(id).getDetails();
     }
 }
