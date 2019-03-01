@@ -3,7 +3,7 @@
 </script>
 
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-7">
         <div class="card">
             <div class="card-title">
                 <#if documentType == 1>
@@ -13,8 +13,8 @@
                 </#if>
             </div>
             <div class="bootstrap-data-table-panel">
-                <div class="table-responsive col-lg-8">
-                    <table id="invoicesTable" class="display table table-bordered table-hover" style="width: 100%">
+                <div class="table-responsive">
+                    <table id="invoicesTable" class="display table table-striped table-bordered bootstrap-data-table-export" style="width: 100%;">
                         <thead>
                         <tr>
                             <th>id</th>

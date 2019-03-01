@@ -7,7 +7,7 @@
         <div class="card">
             <div class="bootstrap-data-table-panel">
                 <div class="table-responsive">
-                    <table id="detailTable" class="table table-striped table-bordered bootstrap-data-table-export" style="width: 100%;">
+                    <table id="detailTable" class="display table table-striped table-bordered bootstrap-data-table-export" style="width: 100%;">
                         <thead>
                         <tr>
                             <th>item</th>

@@ -11,6 +11,12 @@ $(function () {
             jsonUrl = window.contextRoot + '/documents/outcomeInvoices';
         }
         $incomeInvoicesTable.DataTable({
+            "autoWidth": false,
+            dom: 'lBfrtip',
+            lengthMenu: [[10,50,100,-1], ["10","50","100","All"]],
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
             ajax: {
                 url: jsonUrl,
                 dataSrc: ''
@@ -32,7 +38,7 @@ $(function () {
                     data: 'id',
                     bSortable: false,
                     mRender: function (data,type,row) {
-                        return '<a href="/invoices/invoice/' + data + '"> details -> </a>'
+                        return '<a href="/invoices/invoice/' + data + '"><span class="fas fa-info-circle"></span></a>'
                     }
                 }
             ]
