@@ -77,9 +77,9 @@
                             </ul>
                         </li>
 
-                        <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Table <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Balance <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="/#">Test</a></li>
+                                <li><a href="/balance/all"> balance all</a></li>
                             </ul>
                         </li>
                         <li class="label">Extra</li>
@@ -160,6 +160,7 @@
 
         <script src="/assets/js/invoices.js"></script>
         <script src="/assets/js/invoice.js"></script>
+        <script src="/assets/js/balance.js"></script>
 
 
         <!-- nano scroller -->

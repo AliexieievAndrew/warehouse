@@ -1,23 +1,25 @@
 package com.example.warehouse.service.detailservice;
 
+import com.example.warehouse.dto.Balance;
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Item;
 import com.example.warehouse.repository.DetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DetailService implements IDetailService {
     @Autowired
     private DetailRepository detailRepository;
 
     @Override
-    public Iterable<Detail> findAll() {
+    public List<Detail> findAll() {
         return detailRepository.findAll();
     }
 
     @Override
-    public void saveAll (List<Detail> details) {
+    public void saveAll(List<Detail> details) {
         detailRepository.saveAll(details);
     }
 
@@ -56,5 +58,10 @@ public class DetailService implements IDetailService {
                 .mapToDouble(detail -> detail.getPrice())
                 .max()
                 .getAsDouble();
+    }
+
+    @Override
+    public List<Balance> getBalanceByAllItems() {
+        return detailRepository.getBalanceByAllItems();
     }
 }

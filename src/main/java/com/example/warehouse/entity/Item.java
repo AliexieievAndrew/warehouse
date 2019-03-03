@@ -89,7 +89,7 @@ public class Item {
         return "Item{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", subCategory=" + subCategory +
+                ", subCategory=" + subCategory.getName() +
                 ", description='" + description + '\'' +
                 '}';
     }

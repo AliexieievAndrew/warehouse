@@ -87,7 +87,7 @@ public class SubCategory {
     public String toString() {
         return "SubCategory{" +
                 "id=" + id +
-                ", category=" + category +
+                ", category=" + category.getName() +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", items=" + items +

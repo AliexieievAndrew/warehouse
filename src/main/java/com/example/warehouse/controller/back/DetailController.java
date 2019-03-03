@@ -1,5 +1,6 @@
 package com.example.warehouse.controller.back;
 
+import com.example.warehouse.dto.Balance;
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Item;
 import com.example.warehouse.service.detailservice.IDetailService;
@@ -8,7 +9,13 @@ import com.example.warehouse.service.itemservice.IItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/detail")
@@ -24,8 +31,12 @@ public class DetailController {
     private IItemService itemService;
 
     @GetMapping("/all")
-    public Iterable<Detail> findAllDetails() {
+    public List<Detail> findAllDetails() {
         return detailService.findAll();
     }
 
+    @GetMapping("/balance")
+    public List<Balance> getBalance () {
+        return detailService.getBalanceByAllItems();
+    }
 }

@@ -10,7 +10,7 @@
                     <table id="detailTable" class="display table table-striped table-bordered bootstrap-data-table-export" style="width: 100%;">
                         <thead>
                         <tr>
-                            <th>item</th>
+                            <th>name</th>
                             <th>category</th>
                             <th>sub category</th>
                             <th>price</th>
