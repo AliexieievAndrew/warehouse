@@ -14,5 +14,11 @@ public class BalanceController {
         model.addAttribute("page", "balance");
         return "index";
     }
+    // only testing
+    @GetMapping(value = "/period")
+    public String balancePeriod(Model model) {
+        model.addAttribute("page", "balance-period");
+        return "index";
+    }
 
 }

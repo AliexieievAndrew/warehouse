@@ -2,7 +2,6 @@ $(function () {
     var $balanceTable = $('#balanceTable');
     if($balanceTable.length) {
         var jsonUrl = window.contextRoot + '/detail/balance';
-        console.log('hello');
         $balanceTable.DataTable({
             dom: 'lBfrtip',
             lengthMenu: [[10,50,-1], ["10","50","All"]],
