@@ -13,7 +13,7 @@ public class SubCategory {
     @Id
     @Column(name = "id")
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @JsonIgnore
+//    @JsonIgnore
     private int id;
 
     @JoinColumn (name = "category")

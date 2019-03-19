@@ -10,6 +10,11 @@
         $(this).toggleClass("is-active");
     });
 
+    /*
+     ----------------------------------------
+     for the dropBox in the item choice when create invoice
+     ---------------------------------------- */
+    $(".chosen").chosen();
 
     /*  
     -------------------

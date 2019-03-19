@@ -10,10 +10,14 @@
 
         <title>Warehouse: Admin panel</title>
 
-        <script>
-            window.contextRoot = '${context}';
-        </script>
+        <#--<script>-->
+            <#--window.contextRoot = '${context}';-->
+        <#--</script>-->
 
+
+        <#--<script src="/assets/js/lib/jquery.min.js"></script>-->
+        <link rel="stylesheet" href="/assets/css/lib/chosen.min.css">
+        <link  rel="stylesheet" href="/assets/css/lib/test.css" />
         <!-- ================= Favicon ================== -->
         <!-- Standard -->
         <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
@@ -32,6 +36,10 @@
                 href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
                 integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
                 crossorigin="anonymous"/>
+
+        <link rel="stylesheet" href="/assets/css/lib/chosen.min.css">
+
+        <#--<link href="/assets/css/lib/test.css" rel="stylesheet" />-->
         <link href="/assets/css/lib/weather-icons.css" rel="stylesheet" />
         <link href="/assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
         <link href="/assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
@@ -51,6 +59,11 @@
         <link href="/assets/css/lib/data-table/dataTables.bootstrap.min.css" rel="stylesheet" />
         <link href="/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
         <link href="/assets/css/lib/data-table/buttons.dataTables.min.css" rel="stylesheet" />
+
+        <#--autocomplete-->
+        <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+
+        <#--<link rel="stylesheet" href="/assets/css/lib/chosen.min.css">-->
 
     </head>
 
@@ -153,8 +166,18 @@
             </div>
         </div>
 
-        <!-- jquery vendor -->
+
+        <#--testing-->
+        <script>
+            window.contextRoot = '${context}';
+        </script>
         <script src="/assets/js/lib/jquery.min.js"></script>
+
+
+        <script src="/assets/js/lib/chosen/chosen.jquery.min.js"></script>
+
+        <!-- jquery vendor -->
+        <#--<script src="/assets/js/lib/jquery.min.js"></script>-->
         <script src="/assets/js/lib/jquery.nanoscroller.min.js"></script>
 
         <script src="/assets/js/invoices.js"></script>
@@ -186,6 +209,7 @@
         <!-- // flot-chart js -->
 
 
+
         <script src="/assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
         <script src="/assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
         <script src="/assets/js/scripts.js"></script>
@@ -203,6 +227,8 @@
         <script src="/assets/js/lib/data-table/buttons.colVis.min.js"></script>
         <script src="/assets/js/lib/data-table/datatables-init.js"></script>
 
-    </body>
+        <#-- autocomplete function-->
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
 
+    </body>
 </html>

@@ -16,22 +16,28 @@ public class DocumentController {
     private IDocumentService documentService;
 
     @GetMapping("/findAll")
-    public Iterable<Document> findAll () {
+    public Iterable<Document> findAll() {
         return documentService.findAll();
     }
 
     @GetMapping("/incomeInvoices")
-    public Iterable <Document> findAllIncomeInvoices() {
+    public Iterable<Document> findAllIncomeInvoices() {
         return documentService.findAllByDocumentTypeId(1);
     }
 
     @GetMapping("/outcomeInvoices")
-    public Iterable <Document> findAllOutcomeInvoices() {
+    public Iterable<Document> findAllOutcomeInvoices() {
         return documentService.findAllByDocumentTypeId(2);
     }
 
     @GetMapping("/document/{id}")
-    public Set<Detail> getById(@PathVariable ("id") int id) {
-        return  documentService.getById(id).getDetails();
+    public Set<Detail> getById(@PathVariable("id") int id) {
+        return documentService.getById(id).getDetails();
+    }
+
+    @PostMapping("/document/create/incomeinvoice")
+    public void createIncomeInvoice(@RequestBody String details) {
+        System.out.println(details);
+        // create alert !!!
     }
 }
