@@ -76,7 +76,7 @@ $(function () {
             var urlPost = window.contextRoot + '/documents/document/create/incomeinvoice';
             var numTabs = table.rows().count();
 
-            var test = $('tbody tr').map(function () {
+            var tableTBodyData = $('tbody tr').map(function () {
                var obj = {};
                $(this).find('input, select').each(function () {
                    obj[this.name] = $(this).val();
@@ -88,7 +88,7 @@ $(function () {
                 url: urlPost,
                 type: 'POST',
                 contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(test)
+                data: JSON.stringify(tableTBodyData)
             });
         });
     });

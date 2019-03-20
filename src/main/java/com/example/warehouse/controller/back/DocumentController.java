@@ -1,11 +1,13 @@
 package com.example.warehouse.controller.back;
 
+import com.example.warehouse.dto.DetailDTO;
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Document;
 import com.example.warehouse.service.documentservice.IDocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -36,8 +38,11 @@ public class DocumentController {
     }
 
     @PostMapping("/document/create/incomeinvoice")
-    public void createIncomeInvoice(@RequestBody String details) {
-        System.out.println(details);
+    public void createIncomeInvoice(@RequestBody List<DetailDTO> details) {
+        details.forEach(e-> System.out.println(e));
+
+        documentService.createIncomeInvoice(details);
+        //        System.out.println(details);
         // create alert !!!
     }
 }

@@ -95,22 +95,22 @@ public class Detail {
         this.price = price;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Detail detail = (Detail) o;
-        return id == detail.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Detail detail = (Detail) o;
+//        return id == detail.id;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id);
+//    }
 
     @Override
     public String toString() {
-        return "Balance{" +
+        return "Detail{" +
                 "id=" + id +
                 ", item=" + item +
                 ", document=" + document +
