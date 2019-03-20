@@ -21,4 +21,5 @@ public interface DetailRepository extends CrudRepository<Detail,Integer> {
         "GROUP BY d.item"
     )
     List<Balance> getBalanceByAllItems();
+
 }

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/balance")
@@ -14,10 +15,11 @@ public class BalanceController {
         model.addAttribute("page", "balance");
         return "index";
     }
-    // only testing
-    @GetMapping(value = "/period")
-    public String balancePeriod(Model model) {
-        model.addAttribute("page", "balance-period");
+
+    @GetMapping(value = "/balance-item")
+    public String balancePeriod(@RequestParam("item") String item, Model model) {
+        model.addAttribute("item", item);
+        model.addAttribute("page", "balance-item");
         return "index";
     }
 

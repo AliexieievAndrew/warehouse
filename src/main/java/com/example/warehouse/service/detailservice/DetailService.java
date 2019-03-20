@@ -4,6 +4,7 @@ import com.example.warehouse.dto.Balance;
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Item;
 import com.example.warehouse.repository.DetailRepository;
+import com.example.warehouse.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.*;
@@ -12,6 +13,9 @@ import java.util.stream.Collectors;
 public class DetailService implements IDetailService {
     @Autowired
     private DetailRepository detailRepository;
+
+    @Autowired
+    private ItemRepository itemRepository;
 
     @Override
     public List<Detail> findAll() {
@@ -30,6 +34,12 @@ public class DetailService implements IDetailService {
 
     @Override
     public List<Detail> findByItem(Item item) {
+        return detailRepository.findByItem(item);
+    }
+
+    @Override
+    public List<Detail> findByItem(String itemName) {
+        Item item = itemRepository.findByName(itemName);
         return detailRepository.findByItem(item);
     }
 

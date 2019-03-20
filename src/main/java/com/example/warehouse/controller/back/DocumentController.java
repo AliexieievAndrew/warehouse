@@ -39,15 +39,11 @@ public class DocumentController {
 
     @PostMapping("/document/create/incomeinvoice")
     public void createIncomeInvoice(@RequestBody List<DetailDTO> details) {
-        details.forEach(e-> System.out.println(e));
-
         documentService.createIncomeInvoice(details);
     }
 
     @PostMapping("/document/create/outcomeinvoice")
     public void createOutcomeInvoice(@RequestBody List<DetailDTO> details) {
-        details.forEach(e-> System.out.println(e));
-
         documentService.createOutcomeInvoice(details);
     }
 }

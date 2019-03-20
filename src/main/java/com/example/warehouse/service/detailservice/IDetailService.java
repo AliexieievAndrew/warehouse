@@ -16,6 +16,8 @@ public interface IDetailService {
 
     List<Detail> findByItem(Item item);
 
+    List<Detail> findByItem(String itemName);
+
     double averagePrice(List<Detail> details);
 
     double minPrice(List<Detail> details);

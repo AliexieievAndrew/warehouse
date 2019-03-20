@@ -88,7 +88,7 @@ public class DocumentService implements IDocumentService {
     public void createOutcomeInvoice(List<DetailDTO> detailsDTO) {
         Document document = new Document();
         document.setDocumentType(documentTypeRepository.findById(2));
-        
+
         processDocument(detailsDTO,document);
     }
 

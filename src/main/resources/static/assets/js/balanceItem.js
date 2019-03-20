@@ -1,22 +1,24 @@
 $(function () {
-    var $balanceTable = $('#balanceTable');
-    if($balanceTable.length) {
-        var jsonUrl = window.contextRoot + '/detail/balance';
-        $balanceTable.DataTable({
+    var $balanceItemTable = $('#balanceItemTable');
+    var item = window.item;
+    if($balanceItemTable.length) {
+        var url = window.contextRoot + '/detail/balance/' + item;
+
+        $balanceItemTable.DataTable({
             dom: 'lBfrtip',
             lengthMenu: [[10,50,-1], ["10","50","All"]],
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print'
             ],
             ajax: {
-                url: jsonUrl,
+                url: url,
                 dataSrc: ''
             },
             columns: [
                 {
                     data: 'item',
                     mRender: function (data,type,row) {
-                        return '<a href="/balance/balance-item?item='+data.name +'" > <u>'+data.name+'</u></a>';
+                        return data.name;
                     }
                 },
                 {
@@ -26,7 +28,10 @@ $(function () {
                     data: 'credit'
                 },
                 {
-                    data: 'balance'
+                    data: 'price'
+                },
+                {
+                    data: 'total'
                 }
             ]
         });

@@ -185,6 +185,8 @@
         <script src="/assets/js/balance.js"></script>
         <script src="/assets/js/createIncomeInvoice.js"></script>
         <script src="/assets/js/createOutcomeInvoice.js"></script>
+        <script src="/assets/js/balanceItem.js"></script>
+
 
 
 

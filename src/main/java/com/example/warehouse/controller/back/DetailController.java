@@ -7,10 +7,7 @@ import com.example.warehouse.service.detailservice.IDetailService;
 import com.example.warehouse.service.documentservice.IDocumentService;
 import com.example.warehouse.service.itemservice.IItemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -38,5 +35,10 @@ public class DetailController {
     @GetMapping("/balance")
     public List<Balance> getBalance () {
         return detailService.getBalanceByAllItems();
+    }
+
+    @GetMapping("/balance/{item}")
+    public List<Detail> getDetailByItemName (@PathVariable(value = "item") String item) {
+        return detailService.findByItem(item);
     }
 }
