@@ -14,4 +14,10 @@ public class CreateDocumentController {
             model.addAttribute("page", "create-income-invoice");
         return "index";
     }
+
+    @GetMapping ("/create-outcome-invoice")
+    public String createOutcomeInvoice(Model model) {
+        model.addAttribute("page", "create-outcome-invoice");
+        return "index";
+    }
 }

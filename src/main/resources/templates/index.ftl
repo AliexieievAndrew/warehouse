@@ -78,7 +78,7 @@
                         <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> New Document <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
                                 <li><a href="/create-document/create-income-invoice">new Income invoice</a></li>
-                                <li><a href="/test2">Outcome invoice</a></li>
+                                <li><a href="/create-document/create-outcome-invoice">new Outcome invoice</a></li>
                             </ul>
                         </li>
 
@@ -184,6 +184,7 @@
         <script src="/assets/js/invoice.js"></script>
         <script src="/assets/js/balance.js"></script>
         <script src="/assets/js/createIncomeInvoice.js"></script>
+        <script src="/assets/js/createOutcomeInvoice.js"></script>
 
 
 

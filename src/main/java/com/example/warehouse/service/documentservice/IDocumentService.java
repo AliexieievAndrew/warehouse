@@ -19,4 +19,6 @@ public interface IDocumentService {
     double calcTotalPrice(Document document);
 
     void createIncomeInvoice(List<DetailDTO> details);
+
+    void createOutcomeInvoice(List<DetailDTO> details);
 }

@@ -79,6 +79,20 @@ public class DocumentService implements IDocumentService {
 
         Document document = new Document();
         document.setDocumentType(documentTypeRepository.findById(1));
+
+        processDocument(detailsDTO,document);
+    }
+
+
+    @Override
+    public void createOutcomeInvoice(List<DetailDTO> detailsDTO) {
+        Document document = new Document();
+        document.setDocumentType(documentTypeRepository.findById(2));
+        
+        processDocument(detailsDTO,document);
+    }
+
+    private void processDocument(List<DetailDTO> detailsDTO, Document document) {
         document.setDate(OffsetDateTime.now());
 
         Set<Detail> details = detailsDtoToEntity(detailsDTO);
