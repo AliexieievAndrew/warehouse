@@ -42,7 +42,5 @@ public class DocumentController {
         details.forEach(e-> System.out.println(e));
 
         documentService.createIncomeInvoice(details);
-        //        System.out.println(details);
-        // create alert !!!
     }
 }

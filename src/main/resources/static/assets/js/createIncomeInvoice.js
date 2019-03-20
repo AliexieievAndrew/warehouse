@@ -90,6 +90,11 @@ $(function () {
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(tableTBodyData)
             });
+            alert('document added successfully');
+
+            // clearing table and add first empty row
+            $('#createIncomeInvoice').dataTable().fnClearTable();
+            $('#addRow').click();
         });
     });
 });
