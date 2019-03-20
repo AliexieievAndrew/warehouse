@@ -17,10 +17,9 @@ public class BalanceController {
     }
 
     @GetMapping(value = "/balance-item")
-    public String balancePeriod(@RequestParam("item") String item, Model model) {
+    public String balanceItem(@RequestParam("item") String item, Model model) {
         model.addAttribute("item", item);
         model.addAttribute("page", "balance-item");
         return "index";
     }
-
 }
