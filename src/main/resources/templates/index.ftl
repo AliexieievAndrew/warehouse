@@ -60,6 +60,9 @@
         <link href="/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
         <link href="/assets/css/lib/data-table/buttons.dataTables.min.css" rel="stylesheet" />
 
+        <link href="/assets/css/lib/datepicker/bootstrap-datepicker3.min.css" rel="stylesheet" />
+
+
         <#--autocomplete-->
         <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
 
@@ -82,10 +85,10 @@
                             </ul>
                         </li>
 
-                        <li class="label">Apps</li>
+                        <li class="label">Statistic</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i>  Charts  <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="/#">Test</a></li>
+                                <li><a href="/charts/all-items">all items</a></li>
                             </ul>
                         </li>
 
@@ -173,7 +176,6 @@
         </script>
         <script src="/assets/js/lib/jquery.min.js"></script>
 
-
         <script src="/assets/js/lib/chosen/chosen.jquery.min.js"></script>
 
         <!-- jquery vendor -->
@@ -186,9 +188,6 @@
         <script src="/assets/js/createIncomeInvoice.js"></script>
         <script src="/assets/js/createOutcomeInvoice.js"></script>
         <script src="/assets/js/balanceItem.js"></script>
-
-
-
 
         <!-- nano scroller -->
         <script src="/assets/js/lib/menubar/sidebar.js"></script>
@@ -211,8 +210,6 @@
         <script src="/assets/js/lib/flot-chart/flot-chart-init.js"></script>
         <!-- // flot-chart js -->
 
-
-
         <script src="/assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
         <script src="/assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
         <script src="/assets/js/scripts.js"></script>
@@ -229,6 +226,11 @@
         <script src="/assets/js/lib/data-table/buttons.print.min.js"></script>
         <script src="/assets/js/lib/data-table/buttons.colVis.min.js"></script>
         <script src="/assets/js/lib/data-table/datatables-init.js"></script>
+
+
+        <script src="/assets/js/lib/datepicker/bootstrap-datepicker.min.js"></script>
+
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
         <#-- autocomplete function-->
         <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
