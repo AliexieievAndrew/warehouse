@@ -2,7 +2,12 @@
     <div class="col-lg-6">
         <div class="card">
             <div class="card-title">
-                <h4>Select dates</h4>
+                <h4>Select item and range</h4>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <input class=" m-b-10 form-control"  id="item" name="item" placeholder ="item" >
+                </div>
             </div>
             <div class="form-inline">
                 <div class="form-group">
