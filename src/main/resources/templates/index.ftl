@@ -188,6 +188,7 @@
         <script src="/assets/js/createIncomeInvoice.js"></script>
         <script src="/assets/js/createOutcomeInvoice.js"></script>
         <script src="/assets/js/balanceItem.js"></script>
+        <script src="/assets/js/allItems.js"></script>
 
         <!-- nano scroller -->
         <script src="/assets/js/lib/menubar/sidebar.js"></script>

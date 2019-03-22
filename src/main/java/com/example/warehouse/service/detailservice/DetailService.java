@@ -1,12 +1,17 @@
 package com.example.warehouse.service.detailservice;
 
 import com.example.warehouse.dto.Balance;
+import com.example.warehouse.dto.ChartRangeItemDTO;
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Item;
 import com.example.warehouse.repository.DetailRepository;
 import com.example.warehouse.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -73,5 +78,20 @@ public class DetailService implements IDetailService {
     @Override
     public List<Balance> getBalanceByAllItems() {
         return detailRepository.getBalanceByAllItems();
+    }
+
+    @Override
+    public List<ChartRangeItemDTO> getChartRangeItems(String item, String dateFrom, String dateTo) {
+
+        return detailRepository.getChartRangeItems(
+                item,
+                LocalDateTime.parse(dateFrom,
+                        DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
+                        .atOffset(ZoneOffset.MAX),
+                LocalDateTime.parse(dateTo,
+                        DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
+                        .atOffset(ZoneOffset.MIN)
+
+        );
     }
 }

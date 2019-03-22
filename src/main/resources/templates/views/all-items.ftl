@@ -1,17 +1,18 @@
+<#--https://canvasjs.com/jquery-charts/line-chart/-->
 <div class="row">
     <div class="col-lg-6">
         <div class="card">
             <div class="card-title">
-                <h4>Select item and range</h4>
+                <h4>Write item and select range</h4>
             </div>
             <div class="form-inline">
                 <div class="form-group">
-                    <input class=" m-b-10 form-control"  id="item" name="item" placeholder ="item" >
+                    <input class=" m-b-10 form-control"  id="itemList" name="itemList" placeholder ="item..." >
                 </div>
             </div>
             <div class="form-inline">
                 <div class="form-group">
-                    <div id="date-from" class="input-group date m-b-10" data-provide="datepicker"
+                    <div id="date_from" class="input-group date m-b-10" data-provide="datepicker"
                          data-date-format="dd/mm/yyyy">
                         <input placeholder ="date from" type="text" class="form-control">
                         <div class="input-group-addon">
@@ -23,7 +24,7 @@
 
                 </div>
                 <div class="form-group">
-                    <div id="date-to" class="input-group date m-b-10" data-provide="datepicker"
+                    <div id="date_to" class="input-group date m-b-10" data-provide="datepicker"
                          data-date-format="dd/mm/yyyy">
                         <input placeholder ="date to" type="text" class="form-control">
                         <div class="input-group-addon">

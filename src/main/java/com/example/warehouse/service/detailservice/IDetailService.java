@@ -1,6 +1,7 @@
 package com.example.warehouse.service.detailservice;
 
 import com.example.warehouse.dto.Balance;
+import com.example.warehouse.dto.ChartRangeItemDTO;
 import com.example.warehouse.entity.Detail;
 import com.example.warehouse.entity.Item;
 
@@ -25,4 +26,6 @@ public interface IDetailService {
     double maxPrice(List<Detail> details);
 
     List<Balance> getBalanceByAllItems();
+
+    List<ChartRangeItemDTO> getChartRangeItems(String item, String dateFrom, String dateTo);
 }
